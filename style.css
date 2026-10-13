@@ -1,0 +1,55 @@
+:root {
+    /* Colors */
+    --primary-color: #9b1c1c;
+    --secondary-color: #fff3f3;
+    --background-color: #ffffff;
+    --navbar-color: #ffd1d1;
+
+    /* Text */
+    --text-primary: #222222;
+    --text-secondary: #666666;
+
+    /* Fonts */
+    --heading-font: "Sora", sans-serif;
+    --body-font: "DM Sans", sans-serif;
+
+    /* Border Radius */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+
+    /* Shadows */
+    --shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-primary);
+    font-family: var(--body-font);
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}

@@ -3,36 +3,237 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="content" description= 
+    "High-quality printing and graphic design right here in your neighborhood. 
+    From school projects to business materials, we've got you covered. 
+    Connect with us and let's create something amazing together!">
     <title>YouPrint Studio</title>
 
-    <!-- Google Fonts, Favicon, & External Links-->
+    <!-- Google Fonts, Font Awesome & Boostrap Icons, & External Links-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <div class="nav-actions">
-        <nav>
+    <header class="header-site">
+      <div class="header-container">
+        <div class="header-logo">
+          <a href="#home">
+            <img src="assets/logo/YouPrint Studio Official Logo.svg" alt="YouPrint Studio - Print. Design. Create">
+          </a>
+        </div>
+      
+        <nav class="header-nav">
           <ul class="nav-Links" id="nav-Links">
-            <a href="#">Home</a>
-            <a href="#">About Us</a>
-            <a href="#">Services</a>
-            <a href="#">Portfolio</a>
-            <a href="#">Reviews</a>
-            <a href="#">Pricing</a>
-            <a href="#">Blog Tips</a>
-            <a href="#">Customization Request</a>
-            <a href="#">Contact</a>
-            <a href="#">Inquiry</a>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about-us">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#blogs">Blogs</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
+
+        <div class="header-action">
+          <button id="dark-mode-button" class="btn-dark-mode" aria-label="Toggle dark mode">
+            <i class="bi bi-moon"></i>
+          </button>
+        </div>
       </div>
     </header>
 
     <main>
-      <section id="home"></section>
+      <!-- HOME SECTION -->
+      <section id="home">
+        <div class="hero-content">
+          <span>Printing Service Company</span>
+          <h1 class="main-heading">FROM IDEA TO PRINT.</h1>
+          <p class="hero-description">
+            Affordable printing and graphic design services for students, individuals, and organizations</p>
+            <div class="hero-cta">
+              <a href="#inquiry">Send an Inquiry</a>
+              <a href="#services">Explore Services</a>
+            </div>
+        </div>
 
+        <!-- Feature Grid Icons -->
+        <div class="feature-grid-icons">
+          <div class="feature-item">
+            <div class="icon-box">
+              <i class="bi bi-hand-thumbs-up"></i>
+            </div>
+            <div class="feature-info">
+              <h3 class="feature-title">Best Quality</h3>
+              <p class="feature-description">Quality You Can Trust.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="icon-box">
+              <i class="fa-solid fa-peso-sign"></i>
+            </div>
+            <div class="feature-info">
+              <h3 class="feature-title">Secure Payment</h3>
+              <p class="feature-description">Safe and hassle-free transactions.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="icon-box">
+              <i class="bi bi-people"></i>
+            </div>
+            <div class="feature-info">
+              <h3 class="feature-title">Professional</h3>
+              <p class="feature-description">Professional and secure transactions</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="icon-box">
+              <i class="bi bi-tags"></i>
+            </div>
+            <div class="feature-info">
+              <h3 class="feature-title">Competitive Pricing</h3>
+              <p class="feature-description">Competitive & Fair Pricing</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="why-choose-us">
+          <h2>Why Choose Us?</h2>
+
+          <!-- Feature Images -->
+          <div class="feature-container">
+            <div class="feature-card">
+              <div class="feature-image">
+                <img src="assets/home/card 1.jpg" alt="Sample printed document showcasing high-quality output">
+              </div>
+
+              <h3>High Quality Printing</h3>
+              <p>We deliver high-quality printing with sharp details, vibrant colors, and excellent results.</p>
+              <a href="#" class="learn-more">Learn More &rarr;</a>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-image">
+                <img src="assets/home/card 2.jpg" alt="Sample printed document showcasing high-quality output">
+              </div>
+
+              <h3>Affordable & Reliable Service</h3>
+              <p>Fair prices for students, individuals, and businesses, with completed orders on schedule.</p>
+              <a href="#" class="learn-more">Learn More &rarr;</a>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-image">
+                <img src="assets/home/card 3.jpg" alt="Sample printed document showcasing high-quality output">
+              </div>
+
+              <h3>Customizable Service</h3>
+              <p>We tailor solutions to fit your needs.</p>
+              <a href="#" class="learn-more">Learn More &rarr;</a>
+            </div>
+          </div>
+
+          <div class="section-tagline">
+            <p>Discover what we can create for you.</p>
+          </div>
+        </div>
+
+        <!-- Preview Services Cards -->
+        <div class="services-preview">
+          <p class="section-subtitle">SERVICES PREVIEW</p>
+          <h2>Printing Solutions for All Your Needs</h2>
+          <p class="section-description">From everyday documents to custom designs, we provide reliable printing solutions tailored to meet your personal and business needs.</p>
+
+          <div class="preview-service-grid">
+            <div class="preview-service-card">
+              <i class="bi bi-printer"></i>
+            </div>
+            <h3>Document Print</h3>
+            <p>Quality prints for every document.</p>
+            <a href="#" class="learn-more">Learn More &rarr;</a>
+          </div>
+
+          <div class="preview-service-grid">
+            <div class="preview-service-card">
+              <i class="bi bi-person"></i>
+            </div>
+            <h3>Poster & Flyers</h3>
+            <p>Bold designs that capture attention.</p>
+            <a href="#" class="learn-more">Learn More &rarr;</a>
+          </div>
+
+          <div class="preview-service-grid">
+            <div class="preview-service-card">
+              <i class="fa-regular fa-image"></i>
+            </div>
+            <h3>Business Card</h3>
+            <p>Professional cards that make an impression.</p>
+            <a href="#" class="learn-more">Learn More &rarr;</a>
+          </div>
+
+          <div class="preview-service-grid">
+            <div class="preview-service-card">
+              <i class="bi bi-calendar-event"></i>
+            </div>
+            <h3>Invitations</h3>
+            <p>Beautifully crafted invitations for every occasion.</p>
+            <a href="#" class="learn-more">Learn More &rarr;</a>
+          </div>
+
+          <div class="preview-service-grid">
+            <div class="preview-service-card">
+              <i class="bi bi-file-earmark-text"></i>
+            </div>
+            <h3>Stickers & Labels</h3>
+            <p>Custom stickers and labels that stand out.</p>
+            <a href="#" class="learn-more">Learn More &rarr;</a>
+          </div>
+
+          <div class="preview-service-grid">
+            <div class="preview-service-card">
+              <i class="bi bi-box-seam"></i>
+            </div>
+            <h3>Others</h3>
+            <p>Custom printing for your unique needs.</p>
+            <a href="#" class="learn-more">Learn More &rarr;</a>
+          </div>
+        </div>
+
+        <div class="featured-works">
+          <h2>Featured Works</h2>
+
+          <!-- Featured Works -->
+          <div class="featured-works-container">
+            <div class="featured-work-image">
+              <img src="assets/home/featured 1.jpg" alt="Strawberry Latte Promotional Poster">
+              <img src="assets/home/featured review 2.png" alt="Strawberry Latte Star Rating Review">
+            </div>
+
+            <div class="featured-content">
+              <div class="quote-icon">
+                <i class="bi bi-quote"></i>
+              </div>
+
+              <h3>Service Preview</h3>
+              <h4>High Quality Prints</h4>
+              <p>The printing services provided by YouPrint Studio delivered high-quality prints that exceeded my expectations.
+                The colors were vibrant, and the details were sharp. I highly recommend their services.
+              </p>
+
+              <p class="author-info">
+                Gabriella Santos, <span class="author-title">Business Owner</span>
+              </p>
+            </div>
+          </div>
+        </div> 
+      </section>
+
+      <!-- ABOUT US SECTION -->
       <section id="about-us"></section>
 
       <section id="services"></section>
@@ -43,7 +244,7 @@
 
       <section id="pricing"></section>
 
-      <section id="blog-tips"></section>
+      <section id="blogs"></section>
 
       <section id="customization-request"></section>
 
@@ -52,7 +253,54 @@
       <section id="inquiry"></section>
     </main>
 
-    <footer class="footer-site"></footer>
+    <footer class="footer-site">
+      <div class="containter footer-container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <img src="assets/logo/YouPrint Studio Official Logo.svg" alt="YouPrint Studio - Print. Design. Create">
+            </div>
+
+            <p class="footer-tagline">
+              YouPrint Studio is a local printing and graphic design business offering affordable, high-quality printing and reliable design services
+              for individuals, students, businesses, and organizations.
+            </p>
+          </div>
+
+            <div class="footer-column">
+              <h4>Company</h4>
+              <ul>
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-column">
+              <h4>Contacts</h4>
+              <ul>
+                <li><a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i>Facebook</a></li>
+                <li><a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i>Instagram</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-column">
+              <h4>Help</h4>
+              <ul>
+                <li><a href="#">Customer Support</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+            </div>
+        </div>
+
+          <hr>
+          <div class="footer-bottom">
+            <p>&copy; YouPrint Studio. All rights reserved.</p>
+          </div>
+      </div>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>

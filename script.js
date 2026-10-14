@@ -213,3 +213,24 @@ if (reviewsCarousel && !reviewsCarousel.dataset.initialized) {
     reviewsCarousel.dataset.initialized = "true";
   }
 }
+
+/* SLIDE-IN ON SCROLL */
+
+const revealElements = document.querySelectorAll(".reveal");
+
+if (revealElements.length > 0) {
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.2 },
+  );
+
+  revealElements.forEach((element) => revealObserver.observe(element));
+}
+

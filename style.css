@@ -1814,3 +1814,33 @@ body.dark-mode .featured-content {
     transition: none;
   }
 }
+
+/* slide-in on scroll (shared effect) */
+.reveal {
+ opacity: 0;
+}
+.reveal.is-visible {
+ opacity: 1;
+ animation: slide-in 0.6s ease backwards;
+ animation-delay: var(--delay, 0s);
+}
+@keyframes slide-in {
+ from {
+  opacity: 0;
+  transform: translateY(40px);
+ }
+}
+.feature-container .feature-card:nth-child(2) {
+ --delay: 0.15s;
+}
+.feature-container .feature-card:nth-child(3) {
+ --delay: 0.3s;
+}
+@media (prefers-reduced-motion: reduce) {
+ .reveal {
+  opacity: 1;
+ }
+ .reveal.is-visible {
+  animation: none;
+ }
+}

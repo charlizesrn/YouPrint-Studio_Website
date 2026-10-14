@@ -81,6 +81,69 @@ if (mainNavigation) {
   });
 }
 
+const blogGrid = document.querySelector(".blog-grid");
+const prefersReducedMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)",
+);
+
+if (
+  blogGrid &&
+  "IntersectionObserver" in window &&
+  !prefersReducedMotion.matches
+) {
+  const blogCards = blogGrid.querySelectorAll(".blog-card");
+  const blogCardObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15 },
+  );
+
+  blogGrid.classList.add("is-reveal-ready");
+  blogCards.forEach((card) => blogCardObserver.observe(card));
+}
+
+const uploadFileInput = document.querySelector("#design-file");
+
+if (uploadFileInput) {
+  const acceptedExtensions = new Set([
+    "pdf",
+    "jpg",
+    "jpeg",
+    "png",
+    "ai",
+    "tif",
+    "tiff",
+  ]);
+
+  uploadFileInput.addEventListener("change", () => {
+    const [file] = uploadFileInput.files;
+    uploadFileInput.setCustomValidity("");
+
+    if (!file) {
+      return;
+    }
+
+    const extension = file.name.split(".").pop().toLowerCase();
+
+    if (file.size > 20 * 1024 * 1024) {
+      uploadFileInput.setCustomValidity("The file must be 20MB or smaller.");
+      return;
+    }
+
+    if (!acceptedExtensions.has(extension)) {
+      uploadFileInput.setCustomValidity(
+        "Accepted formats are PDF, JPG, PNG, AI, and TIFF.",
+      );
+    }
+  });
+}
+
 /* REVIEW RATING STARS */
 
 const ratingStars = document.querySelector(".rating-stars");

@@ -54,7 +54,9 @@
       <section id="home">
         <div class="hero-content">
           <span>Printing Service Company</span>
-          <h1 class="main-heading">YouPrint Studio Printing &amp; Graphic Design</h1>
+          <h1 class="main-heading" aria-label="YouPrint Studio. Printing and graphic design.">
+            <span class="typewriter-text" aria-hidden="true">YouPrint Studio</span>
+          </h1>
           <h2 class="sub-heading">FROM IDEA TO PRINT.</h2>
           <p class="hero-description">
             Affordable printing and graphic design services for students, individuals, and organizations</p>
@@ -119,7 +121,7 @@
 
               <h3>High Quality Printing</h3>
               <p>We deliver high-quality printing with sharp details, vibrant colors, and excellent results.</p>
-              <a href="#" class="learn-more">Learn More &rarr;</a>
+              <a href="#portfolio" class="learn-more">Learn More &rarr;</a>
             </div>
 
             <div class="feature-card">
@@ -129,7 +131,7 @@
 
               <h3>Affordable & Reliable Service</h3>
               <p>Fair prices for students, individuals, and businesses, with completed orders on schedule.</p>
-              <a href="#" class="learn-more">Learn More &rarr;</a>
+              <a href="#pricing" class="learn-more">Learn More &rarr;</a>
             </div>
 
             <div class="feature-card">
@@ -139,7 +141,7 @@
 
               <h3>Customizable Service</h3>
               <p>We tailor solutions to fit your needs.</p>
-              <a href="#" class="learn-more">Learn More &rarr;</a>
+              <a href="#upload-design" class="learn-more">Learn More &rarr;</a>
             </div>
           </div>
 
@@ -156,6 +158,7 @@
 
           <div class="preview-service-grid">
             <div class="preview-service-card">
+              <img class="preview-service-image" src="assets/home/preview 1.jpg" alt="Stack of freshly printed documents">
               <div class="preview-service-icon" aria-hidden="true"><i class="bi bi-printer"></i></div>
               <h3>Document Print</h3>
               <p>Quality prints for every document.</p>
@@ -163,6 +166,7 @@
             </div>
 
             <div class="preview-service-card">
+              <img class="preview-service-image" src="assets/home/preview 2.png" alt="Printed brochure and flyer designs">
               <div class="preview-service-icon" aria-hidden="true"><i class="bi bi-person"></i></div>
               <h3>Poster & Flyers</h3>
               <p>Bold designs that capture attention.</p>
@@ -170,6 +174,7 @@
             </div>
 
             <div class="preview-service-card">
+              <img class="preview-service-image" src="assets/home/preview 3.jpg" alt="A stack of custom business cards">
               <div class="preview-service-icon" aria-hidden="true"><i class="fa-regular fa-image"></i></div>
               <h3>Business Card</h3>
               <p>Professional cards that make an impression.</p>
@@ -177,6 +182,7 @@
             </div>
 
             <div class="preview-service-card">
+              <img class="preview-service-image" src="assets/home/preview 4.jpg" alt="Printed invitation cards with floral designs">
               <div class="preview-service-icon" aria-hidden="true"><i class="bi bi-calendar-event"></i></div>
               <h3>Invitations</h3>
               <p>Beautifully crafted invitations for every occasion.</p>
@@ -184,6 +190,7 @@
             </div>
 
             <div class="preview-service-card">
+              <img class="preview-service-image" src="assets/home/preview 5.png" alt="Printed circular product labels">
               <div class="preview-service-icon" aria-hidden="true"><i class="bi bi-file-earmark-text"></i></div>
               <h3>Stickers & Labels</h3>
               <p>Custom stickers and labels that stand out.</p>
@@ -191,6 +198,7 @@
             </div>
 
             <div class="preview-service-card">
+              <img class="preview-service-image" src="assets/home/preview 6.jpg" alt="Colorful printed bookmarks and stickers">
               <div class="preview-service-icon" aria-hidden="true"><i class="bi bi-box-seam"></i></div>
               <h3>Others</h3>
               <p>Custom printing for your unique needs.</p>
@@ -221,7 +229,7 @@
               </p>
 
               <p class="author-info">
-                Gabriella Santos, <span class="author-title">Business Owner</span>
+                - Gabriella Santos, <span class="author-title">Business Owner</span>
               </p>
             </div>
           </div>
@@ -517,7 +525,7 @@
       <section id="reviews">
         <div class="reviews-header">
           <p class="section-subtitle">REVIEWS</p>
-          <h2>What Our Customers Say:</h2>
+          <h2>What Our Customers Say</h2>
         </div>
 
         <div class="reviews-carousel">
@@ -750,9 +758,9 @@
             <!-- TODO: JS Add an endpoint for fetching data -->
             <form class="inquiry-form" action="#" method="POST">
               <label for="inquiry-name">Name *</label>
-              <input type="text" id="inquiry-name" name="name" placeholder="Name *" required>
+              <input type="text" id="inquiry-name" name="name" placeholder="Name" required>
               <label for="inquiry-contact">Contact Number *</label>
-              <input type="tel" id="inquiry-contact" name="contact" placeholder="Contact Number *" required>
+              <input type="tel" id="inquiry-contact" name="contact" placeholder="Contact Number" required>
               <label for="inquiry-message">Write your message</label>
               <textarea id="inquiry-message" name="message" rows="10" cols="20" placeholder="Write your message" required></textarea>
                 <button type="Submit">Send Message</button>
@@ -770,9 +778,9 @@
             <!-- TODO: JS Add an endpoint for fetching data -->
             <form class="upload-design-form" id="upload-design" action="#" method="POST" enctype="multipart/form-data">
               <label for="upload-name">Name *</label>
-              <input type="text" id="upload-name" name="name" placeholder="Name *" required>
+              <input type="text" id="upload-name" name="name" placeholder="Name" required>
               <label for="upload-contact">Contact Number *</label>
-              <input type="tel" id="upload-contact" name="contact" placeholder="Contact Number *" required>
+              <input type="tel" id="upload-contact" name="contact" placeholder="Contact Number" required>
               <label for="quantity-size">Quantity &amp; Size</label>
               <input type="text" id="quantity-size" name="quantity-size" placeholder="Quantity & Size" required>
               <label for="design-file">Upload design file</label>
@@ -781,8 +789,8 @@
 
               <small id="upload-file-help">
               Accepted Formats: PDF, JPG, PNG, AI, TIFF
-              Max File Size: 20MB
-              Large Files? Email us directly youprintstudio@gmail.com
+              Max File Size: 20MB<br>
+              Large Files? Email us directly at <a href="#">youprintstudio@gmail.com</a>
               </small>
 
               <label for="upload-notes">Additional Notes</label>

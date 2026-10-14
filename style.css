@@ -233,15 +233,15 @@ ul {
 
 .why-choose-us {
   max-width: 1200px;
-  margin: 100px auto 0;
+  margin: 80px auto 0;
 }
 
 .why-choose-us > .section-tagline {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 8px auto 0;
   color: var(--text-secondary);
   font-size: 14px;
-  text-align: right;
+  text-align: left;
 }
 
 .feature-container {
@@ -249,7 +249,7 @@ ul {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 32px;
   max-width: 1200px;
-  margin: 40px auto;
+  margin: 28px auto;
 }
 
 .feature-card {

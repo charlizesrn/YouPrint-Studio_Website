@@ -446,13 +446,15 @@ ul {
  position: relative;
  width: min(80%, 340px);
 }
+
 .featured-poster-image {
  display: block;
  width: 100%;
- max height: 420px;
+max-height: 420px;
  height: auto;
  box-shadow: 0 12px 28px rgba(20, 10, 15, 0.2);
 }
+
 .featured-review-chip {
  position: absolute;
  left: 50%;

@@ -417,7 +417,7 @@ ul {
   object-fit: contain;
 }
 
-.featured-work-image img:first-child {
+/*.featured-work-image img:first-child {
   position: relative;
   z-index: 1;
   width: auto;
@@ -437,6 +437,30 @@ ul {
   border-radius: 12px;
   transform: translateX(-50%);
   filter: drop-shadow(0 8px 14px rgba(20, 10, 15, 0.18));
+}
+  */
+
+
+/* featured works: review chip covers the lower half of the order now button */
+.featured-poster {
+ position: relative;
+ width: min(72%, 300px);
+}
+.featured-poster-image {
+ display: block;
+ width: 100%;
+ height: auto;
+ box-shadow: 0 12px 28px rgba(20, 10, 15, 0.2);
+}
+.featured-review-chip {
+ position: absolute;
+ left: 50%;
+ bottom: 7%;
+ width: 90%;
+ height: auto;
+ border-radius: 12px;
+ transform: translateX(-50%);
+ filter: drop-shadow(0 8px 14px rgba(20, 10, 15, 0.18));
 }
 
 .featured-content {

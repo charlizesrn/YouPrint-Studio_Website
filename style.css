@@ -724,6 +724,17 @@ ul {
 }
 
 /* PORTFOLIO SECTION */
+.portfolio {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  padding-right: 8.5%;
+  padding-left: 8.5%;
+}
+
+.portfolio-card img {
+  cursor: pointer;
+}
+
 .portfolio-category {
   max-width: 1150px;
   margin: 0 auto 50px;
@@ -731,7 +742,11 @@ ul {
 
 .portfolio-category > h3 {
   font-family: var(--heading-font);
-  text-align: center;
+}
+
+.portfolio-category > .section-description {
+  max-width: none;
+  margin: 4px 0 14px;
 }
 
 .portfolio-grid {
@@ -744,27 +759,96 @@ ul {
 .portfolio-card {
   overflow: hidden;
   border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
-  background-color: var(--background-color);
   transition: transform 0.3s ease;
 }
 
-.portfolio-card:hover {
+.portfolio-card.is-visible:hover {
   transform: translateY(-5px);
 }
 
 .portfolio-card img {
   width: 100%;
-  height: 230px;
+  height: auto;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
+  border-radius: var(--radius-sm);
+}
+
+.portfolio-card img:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 3px;
 }
 
 .portfolio-card h4 {
-  padding: 18px;
+  padding-top: 8px;
   font-family: var(--heading-font);
 }
 
+.portfolio-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 55px 20px;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.portfolio-lightbox[hidden] {
+  display: none;
+}
+
+.portfolio-lightbox img {
+  max-width: 95vw;
+  max-height: 85vh;
+  object-fit: contain;
+}
+
+.portfolio-lightbox-close {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 38px;
+  cursor: pointer;
+}
+
 /* REVIEWS SECTION */
+.reviews-header,
+body.dark-mode .reviews-header {
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  text-align: center;
+  padding: 0;
+}
+
+.review-avatar {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.verified-badge {
+  position: absolute;
+  right: -4px;
+  bottom: -3px;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--background-color);
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 9px;
+}
 .review-card {
   padding: 25px;
   border: 1px solid #eeeeee;
@@ -788,10 +872,6 @@ ul {
   background-color: var(--primary-color);
   color: #ffffff;
   font-weight: 700;
-}
-
-.verified-badge {
-  color: var(--primary-color);
 }
 
 .review-meta h4 {
@@ -839,14 +919,26 @@ ul {
   margin-bottom: 18px;
 }
 
+.review-rating-label {
+  margin-top: -5px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
 .rating-stars {
   display: flex;
   flex-direction: row-reverse;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 8px;
-  margin: 15px 0 25px;
+  margin: 8px 0 20px;
 }
 
+.review-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 4px;
+}
 .rating-stars input {
   position: absolute;
   opacity: 0;
@@ -872,7 +964,6 @@ ul {
 
 /* Review surface and carousel */
 
-.reviews-header,
 .review-form {
   background: rgba(255, 243, 243, 0.65);
   backdrop-filter: blur(12px);
@@ -880,10 +971,6 @@ ul {
   border: 1px solid rgba(255, 255, 255, 0.45);
   box-shadow: var(--shadow-md);
   border-radius: var(--radius-md);
-}
-
-.reviews-header {
-  padding: 25px;
 }
 
 .reviews-carousel {
@@ -1566,9 +1653,17 @@ ul {
 
   .preview-service-grid,
   .services-grid,
-  .portfolio-grid,
   .blog-grid {
     grid-template-columns: 1fr;
+  }
+
+  #portfolio {
+    padding: 45px 8.5%;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
   }
 
   .preview-service-card {
@@ -1665,10 +1760,6 @@ ul {
     width: 270px;
   }
 
-  .reviews-header {
-    padding: 18px;
-  }
-
   .reviews-carousel:has(.review-card:hover) .review-card:hover {
     transform: scale(1.03);
   }
@@ -1678,6 +1769,23 @@ ul {
     padding: 10px;
 
     font-size: 13px;
+  }
+}
+
+@media (max-width: 700px) {
+  #portfolio {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 420px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1747,18 +1855,23 @@ body.dark-mode .preview-service-icon {
   background-color: rgba(36, 36, 36, 0.92);
 }
 
-/* Keep the review-card background unchanged, including in dark mode. */
-body.dark-mode .reviews-header {
-  background: rgba(41, 41, 41, 0.65);
-  border-color: rgba(255, 255, 255, 0.12);
-}
-
 body.dark-mode input,
 body.dark-mode textarea,
 body.dark-mode select {
   background-color: #242424;
   color: #f5f5f5;
   border-color: #555555;
+}
+
+body.dark-mode .review-form input:not([type="radio"]),
+body.dark-mode .review-form textarea {
+  color: #ffffff;
+}
+
+body.dark-mode .review-form input::placeholder,
+body.dark-mode .review-form textarea::placeholder {
+  color: #ffffff;
+  opacity: 1;
 }
 
 body.dark-mode .pricing-table {
@@ -1817,30 +1930,31 @@ body.dark-mode .featured-content {
 
 /* slide-in on scroll (shared effect) */
 .reveal {
- opacity: 0;
-}
-.reveal.is-visible {
- opacity: 1;
- animation: slide-in 0.6s ease backwards;
- animation-delay: var(--delay, 0s);
-}
-@keyframes slide-in {
- from {
   opacity: 0;
   transform: translateY(40px);
- }
+  transition:
+    opacity 0.8s ease var(--delay, 0s),
+    transform 0.8s ease var(--delay, 0s);
 }
-.feature-container .feature-card:nth-child(2) {
- --delay: 0.15s;
-}
-.feature-container .feature-card:nth-child(3) {
- --delay: 0.3s;
-}
-@media (prefers-reduced-motion: reduce) {
- .reveal {
+
+.reveal.is-visible {
   opacity: 1;
- }
- .reveal.is-visible {
-  animation: none;
- }
+  transform: translateY(0);
+}
+
+.feature-container .feature-card:nth-child(2) {
+  --delay: 0.15s;
+}
+
+.feature-container .feature-card:nth-child(3) {
+  --delay: 0.3s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }

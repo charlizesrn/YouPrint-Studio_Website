@@ -219,18 +219,99 @@ if (reviewsCarousel && !reviewsCarousel.dataset.initialized) {
 const revealElements = document.querySelectorAll(".reveal");
 
 if (revealElements.length > 0) {
-  const revealObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.2 },
-  );
+  if (
+    !("IntersectionObserver" in window) ||
+    prefersReducedMotion.matches
+  ) {
+    revealElements.forEach((element) => {
+      element.classList.add("is-visible");
+    });
+  } else {
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 },
+    );
 
-  revealElements.forEach((element) => revealObserver.observe(element));
+    revealElements.forEach((element) => revealObserver.observe(element));
+  }
 }
 
+/* PORTFOLIO IMAGE PREVIEW */
+const portfolioImages = document.querySelectorAll(".portfolio-card img");
+
+if (portfolioImages.length > 0) {
+  const lightbox = document.createElement("div");
+  lightbox.classList.add("portfolio-lightbox");
+  lightbox.hidden = true;
+  lightbox.setAttribute("role", "dialog");
+  lightbox.setAttribute("aria-modal", "true");
+  lightbox.setAttribute("aria-label", "Portfolio image preview");
+
+  const previewImage = document.createElement("img");
+  previewImage.alt = "Portfolio image preview";
+
+  const closeButton = document.createElement("button");
+  closeButton.classList.add("portfolio-lightbox-close");
+  closeButton.type = "button";
+  closeButton.textContent = "x";
+  closeButton.setAttribute("aria-label", "Close image preview");
+
+  lightbox.appendChild(closeButton);
+  lightbox.appendChild(previewImage);
+  document.body.appendChild(lightbox);
+
+  let activeImage = null;
+
+  function closePreview() {
+    lightbox.hidden = true;
+    previewImage.removeAttribute("src");
+    document.body.style.overflow = "";
+    activeImage?.focus();
+    activeImage = null;
+  }
+
+  portfolioImages.forEach((image) => {
+    image.tabIndex = 0;
+    image.setAttribute("role", "button");
+    image.setAttribute("aria-haspopup", "dialog");
+
+    function openPreview() {
+      activeImage = image;
+      previewImage.src = image.src;
+      previewImage.alt = image.alt;
+      lightbox.hidden = false;
+      document.body.style.overflow = "hidden";
+      closeButton.focus();
+    }
+
+    image.addEventListener("click", openPreview);
+
+    image.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openPreview();
+      }
+    });
+  });
+
+  closeButton.addEventListener("click", closePreview);
+
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) {
+      closePreview();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !lightbox.hidden) {
+      closePreview();
+    }
+  });
+}

@@ -452,37 +452,37 @@
       </section>
 
       <section id="portfolio">
-        <div class="portfolio-header">
+        <div class="portfolio-header reveal">
           <p class="section-subtitle">PORTFOLIO</p>
           <h2>Explore Our Creative Portfolio</h2>
         </div>
 
         <div class="portfolio-category">
-          <h3>Previous Printing Projects</h3>
-          <p class="section-description">Browse our printing work - business cards, brochures, posters, banners, stickers, and more. See the quality and variety we deliver for every order.</p>
+          <h3 class="reveal">Previous Printing Projects</h3>
+          <p class="section-description reveal">Browse our printing work - business cards, brochures, posters, banners, stickers, and more. See the quality and variety we deliver for every order.</p>
 
           <div class="portfolio-grid">
-            <div class="portfolio-card">
+            <div class="portfolio-card reveal">
               <img src="assets/portfolio/portfolio 1.jpg" alt="Promotional burger poster design showcasing large typography, vibrant food photography, and marketing-focused poster">
               <h4>Posters</h4>
             </div>
-            <div class="portfolio-card">
+            <div class="portfolio-card reveal">
               <img src="assets/portfolio/portfolio 2.jpg" alt="Restaurant banner advertisement featuring food menu items, pricing information, and promotional graphics">
               <h4>Banners</h4>
             </div>
-            <div class="portfolio-card">
+            <div class="portfolio-card reveal">
               <img src="assets/portfolio/portfolio 3.jpg" alt="Custom business card design with illustrated branding elements and contact information">
               <h4>Business Cards</h4>
             </div>
-            <div class="portfolio-card">
+            <div class="portfolio-card reveal">
               <img src="assets/portfolio/portfolio 4.jpg" alt="Custom donut-themed sticker and label designs prepared for product packaging and branding">
               <h4>Stickers & Labels</h4>
             </div>
-            <div class="portfolio-card">
+            <div class="portfolio-card reveal">
               <img src="assets/portfolio/portfolio 5.jpg" alt="Elegant floral invitation card design with decorative borders, event details, and formal typography">
               <h4>Invitations</h4>
             </div>
-            <div class="portfolio-card">
+            <div class="portfolio-card reveal">
               <img src="assets/portfolio/portfolio 6.jpg" alt="Printed document pages displaying formatted text, tables, and professional document layout">
               <h4>Documents</h4>
             </div>
@@ -490,31 +490,31 @@
         </div>
 
         <div class="portfolio-category">
-          <h3>Previous Graphic Design Projects</h3>
-          <p class="section-description">Explore our design portfolio - logos, brand identities, marketing materials, and social media graphics. Each project reflects our attention to detail and creative approach.</p>
+          <h3 class="reveal">Previous Graphic Design Projects</h3>
+          <p class="section-description reveal">Explore our design portfolio - logos, brand identities, marketing materials, and social media graphics. Each project reflects our attention to detail and creative approach.</p>
 
           <div class="portfolio-grid">
-            <div class="portfolio-card">
+            <div class="portfolio-card reveal">
               <img src="assets/portfolio/portfolio 7.jpg" alt="Custom bakery logo design featuring bold typography and illustrated branding elements created for a local food business">
               <h4>Logo</h4>
             </div>
-            <div class="portfolio-card">
+            <div class="portfolio-card reveal">
               <img src="assets/portfolio/portfolio 8.jpg" alt="Collection of social media promotional graphics designed for product marketing, branding, and customer engagement across digital platforms">
               <h4>Social Media Graphics</h4>
             </div>
-            <div class="portfolio-card">
+            <div class="portfolio-card reveal">
               <img src="assets/portfolio/portfolio 9.jpg" alt="Product marketing campaign materials featuring promotional graphics, advertisements, and branded visual content for social media and print use">
               <h4>Marketing Materials</h4>
             </div>
-            <div class="portfolio-card">
+            <div class="portfolio-card reveal">
               <img src="assets/portfolio/portfolio 10.jpg" alt="Business branding package showcasing coordinated brand assets including packaging, labels, business cards, and visual identity materials">
               <h4>Business Branding</h4>
             </div>
-            <div class="portfolio-card">
+            <div class="portfolio-card reveal">
               <img src="assets/portfolio/portfolio 11.jpg" alt="Food product packaging design featuring custom labels, branding elements, and packaging mockups created for a retail product line">
               <h4>Product Packaging Design</h4>
             </div>
-            <div class="portfolio-card">
+            <div class="portfolio-card reveal">
               <img src="assets/portfolio/portfolio 12.jpg" alt="Promotional flyer design highlighting food menu items, pricing information, and marketing visuals for advertising campaigns">
               <h4>Flyers</h4>
             </div>
@@ -533,8 +533,10 @@
           <!-- REVIEW 1 -->
           <article class="review-card">
             <div class="review-profile">
-              <div class="review-avatar" aria-hidden="true">M</div>
-              <div class="verified-badge" aria-label="Verified review"><i class="bi bi-star-fill" aria-hidden="true"></i></div>
+              <div class="review-avatar" aria-hidden="true">
+                M
+                <span class="verified-badge"><i class="bi bi-star-fill" aria-hidden="true"></i></span>
+              </div>
 
               <div class="review-meta">
                 <h4>Maika M.</h4>
@@ -558,8 +560,10 @@
           <!-- REVIEW 2 -->
           <article class="review-card">
             <div class="review-profile">
-              <div class="review-avatar" aria-hidden="true">R</div>
-              <div class="verified-badge" aria-label="Verified review"><i class="bi bi-star-fill" aria-hidden="true"></i></div>
+              <div class="review-avatar" aria-hidden="true">
+                R
+                <span class="verified-badge"><i class="bi bi-star-fill" aria-hidden="true"></i></span>
+              </div>
 
               <div class="review-meta">
                 <h4>Princess R.</h4>
@@ -583,8 +587,10 @@
           <!-- REVIEW 3 -->
           <article class="review-card">
             <div class="review-profile">
-              <div class="review-avatar" aria-hidden="true">S</div>
-              <div class="verified-badge" aria-label="Verified review"><i class="bi bi-star-fill" aria-hidden="true"></i></div>
+              <div class="review-avatar" aria-hidden="true">
+                S
+                <span class="verified-badge"><i class="bi bi-star-fill" aria-hidden="true"></i></span>
+              </div>
 
               <div class="review-meta">
                 <h4>Student Organization, Manila</h4>
@@ -612,7 +618,7 @@
           <!-- TODO: JS Add an endpoint for fetching data -->
           <form action="#" method="POST" class="review-form">
             <h3>Leave a Review for YouPrint Studio</h3>
-            <p id="review-rating-label">How would you rate the service of YouPrint Studio?</p>
+            <p id="review-rating-label" class="review-rating-label">How would you rate the service of YouPrint Studio?</p>
 
             <div class="rating-stars" role="radiogroup" aria-labelledby="review-rating-label">
               <input type="radio" id="star5" name="rating" value="5" aria-label="5 stars">

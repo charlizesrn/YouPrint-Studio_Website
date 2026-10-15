@@ -571,8 +571,6 @@ ul {
   margin: 35px auto;
 }
 
-
-
 .about-content h3 {
   font-family: var(--heading-font);
   margin-bottom: 12px;
@@ -581,12 +579,6 @@ ul {
 .about-content p {
   color: var(--text-secondary);
   margin-bottom: 15px;
-}
-
-.mission-vision-container,
-.objectives-container {
-  max-width: 1100px;
-  margin: 50px auto 0;
 }
 
 .mission-vision-container > h2,
@@ -1911,4 +1903,112 @@ body.dark-mode .preview-service-card::before {
   rgba(24, 24, 24, 0.85) 45%,
   rgba(24, 24, 24, 0.55) 100%
  );
+}
+
+/* about us: follow figma layout */
+.about-header {
+ max-width: 1100px;
+}
+
+.about-intro {
+ max-width: 1100px;
+ margin: 0 auto;
+ display: grid;
+ grid-template-columns: 1.1fr 1fr;
+ align-items: center;
+ gap: 72px;
+}
+
+.about-intro .about-container,
+.about-intro .about-content {
+ max-width: none;
+ margin: 0;
+}
+
+.about-images {
+ grid-template-rows: 170px 240px;
+ gap: 16px;
+}
+
+.about-image-left {
+ align-self: center;
+ height: 280px;
+}
+
+.about-content h3 {
+ font-size: clamp(26px, 3vw, 34px);
+ margin-bottom: 16px;
+}
+
+.mission-vision-container,
+.objectives-container {
+  margin: 80px auto;   
+  max-width: 1200px;
+}
+
+
+.mission-vision-container {
+  margin: 80px auto;   
+  max-width: 1200px;   
+}
+
+.mission-vision-container > h2,
+.objectives-container > h2 {
+ margin-bottom: 40px;
+}
+
+.info-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-10px) scale(1.02); 
+  box-shadow: 0 12px 28px rgba(20, 10, 15, 0.2); 
+}
+
+
+/* number with the pink circle behind it */
+.card-number {
+ position: relative;
+ isolation: isolate;
+ display: inline-block;
+ color: var(--text-primary);
+ font-size: 24px;
+ margin-bottom: 20px;
+}
+
+.card-number::before {
+ content: "";
+ position: absolute;
+ z-index: -1;
+ top: 50%;
+ left: 0.65em;
+ width: 36px;
+ height: 36px;
+ border-radius: 50%;
+ background-color: #e48b90;
+ transform: translateY(-50%);
+}
+
+/* about us: spacing above and below (desktop only) */
+@media (min-width: 769px) {
+ #about-us {
+  padding-top: 100px;
+  padding-bottom: 100px;
+ }
+}
+
+/* about us: mobile */
+@media (max-width: 768px) {
+ .about-intro {
+  grid-template-columns: 1fr;
+  gap: 32px;
+ }
+ .about-images {
+  grid-template-rows: repeat(2, 150px);
+ }
+ .about-image-left {
+  height: auto;
+  align-self: stretch;
+ }
 }

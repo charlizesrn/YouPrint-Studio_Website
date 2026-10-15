@@ -297,7 +297,7 @@ ul {
 .services-preview,
 .featured-works {
   max-width: 1200px;
-  margin: 65px auto 0;
+  margin: 80px auto 0;
   text-align: center;
 }
 
@@ -361,7 +361,7 @@ ul {
   width: 48px;
   height: 48px;
   margin-top: auto;
-  color: var(--primary-color);
+   color: #ff888a;
   font-size: 24px;
   margin-bottom: 14px;
   border-radius: var(--radius-sm);
@@ -403,7 +403,7 @@ ul {
 .featured-work-image {
   position: relative;
   isolation: isolate;
-  min-height: 360px;
+  min-height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -417,7 +417,7 @@ ul {
   object-fit: contain;
 }
 
-.featured-work-image img:first-child {
+/*.featured-work-image img:first-child {
   position: relative;
   z-index: 1;
   width: auto;
@@ -437,6 +437,33 @@ ul {
   border-radius: 12px;
   transform: translateX(-50%);
   filter: drop-shadow(0 8px 14px rgba(20, 10, 15, 0.18));
+}
+  */
+
+
+/* featured works: review chip covers the lower half of the order now button */
+.featured-poster {
+ position: relative;
+ width: min(80%, 340px);
+}
+
+.featured-poster-image {
+ display: block;
+ width: 100%;
+ max-height: 420px;
+ height: auto;
+ box-shadow: 0 12px 28px rgba(20, 10, 15, 0.2);
+}
+
+.featured-review-chip {
+ position: absolute;
+ left: 50%;
+ bottom: 7%;
+ width: 90%;
+ height: auto;
+ border-radius: 12px;
+ transform: translateX(-50%);
+ filter: drop-shadow(0 8px 14px rgba(20, 10, 15, 0.18));
 }
 
 .featured-content {
@@ -490,6 +517,7 @@ ul {
   scroll-margin-top: 90px;
 }
 
+
 .about-header,
 .portfolio-header,
 .reviews-header,
@@ -514,12 +542,17 @@ ul {
   margin: 0 auto 35px;
 }
 
+
+
+
+
 .about-images {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   grid-template-rows: repeat(2, 200px);
   gap: 15px;
 }
+
 
 .about-images img {
   width: 100%;
@@ -531,6 +564,7 @@ ul {
 .about-image-left {
   grid-row: 1 / 3;
 }
+
 
 .about-content {
   max-width: 900px;
@@ -545,12 +579,6 @@ ul {
 .about-content p {
   color: var(--text-secondary);
   margin-bottom: 15px;
-}
-
-.mission-vision-container,
-.objectives-container {
-  max-width: 1100px;
-  margin: 50px auto 0;
 }
 
 .mission-vision-container > h2,
@@ -1951,10 +1979,10 @@ body.dark-mode .featured-content {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal,
-  .reveal.is-visible {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
+ .reveal {
+  opacity: 1;
+ }
+ .reveal.is-visible {
+  animation: none;
+ }
 }

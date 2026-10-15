@@ -450,7 +450,7 @@ ul {
 .featured-poster-image {
  display: block;
  width: 100%;
-max-height: 420px;
+ max-height: 420px;
  height: auto;
  box-shadow: 0 12px 28px rgba(20, 10, 15, 0.2);
 }
@@ -517,6 +517,7 @@ max-height: 420px;
   scroll-margin-top: 90px;
 }
 
+
 .about-header,
 .portfolio-header,
 .reviews-header,
@@ -541,12 +542,17 @@ max-height: 420px;
   margin: 0 auto 35px;
 }
 
+
+
+
+
 .about-images {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   grid-template-rows: repeat(2, 200px);
   gap: 15px;
 }
+
 
 .about-images img {
   width: 100%;
@@ -559,10 +565,13 @@ max-height: 420px;
   grid-row: 1 / 3;
 }
 
+
 .about-content {
   max-width: 900px;
   margin: 35px auto;
 }
+
+
 
 .about-content h3 {
   font-family: var(--heading-font);

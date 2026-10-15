@@ -403,7 +403,7 @@ ul {
 .featured-work-image {
   position: relative;
   isolation: isolate;
-  min-height: 360px;
+  min-height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -444,11 +444,12 @@ ul {
 /* featured works: review chip covers the lower half of the order now button */
 .featured-poster {
  position: relative;
- width: min(72%, 300px);
+ width: min(80%, 340px);
 }
 .featured-poster-image {
  display: block;
  width: 100%;
+ max height: 420px;
  height: auto;
  box-shadow: 0 12px 28px rgba(20, 10, 15, 0.2);
 }

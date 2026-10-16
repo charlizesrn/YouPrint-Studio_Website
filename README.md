@@ -42,7 +42,7 @@ This academic project was undertaken to apply web development concepts such as s
 
 | Key Feature | Description | Preview |
 |------------|-------------|---------|
-| 🏠 Home Page | Professional landing page featuring company information, featured services, and call-to-action sections. | <img src="assets/screenshots/Home 1.png" alt="Home section of the YouPrint Studio Website" width="500"> |
+| 🏠 Home Page | Professional landing page featuring company information, featured services, and call-to-action sections. | <img src="assets/screenshots/home 1.png" alt="Home section of the YouPrint Studio Website" width="500"> |
 | 👤 About Us Page | Highlights the organization's mission, vision, and objective | <img src="assets/screenshots/About us 2.png" alt="Home section of the YouPrint Studio Website" width="500">
 | 🎨 Services Showcase | Highlights printing and graphic design services with dedicated service cards and pricing information. | <img src="assets/screenshots/Services 1.png" alt="Services section of the YouPrint Studio Website" width="500"> |
 | 📂 Portfolio Gallery | Displays previous printing and graphic design projects to showcase quality and creativity. | <img src="assets/screenshots/portfolio 1.png" alt="Portfolio section of the YouPrint Studio Website" width="500"> |
@@ -71,7 +71,7 @@ Explore the website through the screenshots below.
 
 1. Home
 
-<img src="assets/screenshots/Home 1.png" alt="Home section of the YouPrint Studio Website" width="500">
+<img src="assets/screenshots/home 1.png" alt="Home section of the YouPrint Studio Website" width="500">
 
 2. About Us
 

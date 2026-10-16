@@ -55,7 +55,6 @@ ul {
 }
 
 /* HEADER */
-
 .header-site {
   background-color: var(--background-color);
   box-shadow: var(--shadow-sm);
@@ -307,6 +306,10 @@ ul {
   font-weight: 700;
   letter-spacing: 2px;
   margin-bottom: 12px;
+}
+
+#services > .section-subtitle {
+  margin-left: 355px;
 }
 
 .section-description {

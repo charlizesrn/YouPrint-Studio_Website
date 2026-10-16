@@ -247,16 +247,18 @@ if (revealElements.length > 0) {
   }
 }
 
-/* PORTFOLIO IMAGE PREVIEW */
-const portfolioImages = document.querySelectorAll(".portfolio-card img");
+/* SERVICE AND PORTFOLIO IMAGE PREVIEW */
+const previewImages = document.querySelectorAll(
+  ".portfolio-card img, .service-image img",
+);
 
-if (portfolioImages.length > 0) {
+if (previewImages.length > 0) {
   const lightbox = document.createElement("div");
   lightbox.classList.add("portfolio-lightbox");
   lightbox.hidden = true;
   lightbox.setAttribute("role", "dialog");
   lightbox.setAttribute("aria-modal", "true");
-  lightbox.setAttribute("aria-label", "Portfolio image preview");
+  lightbox.setAttribute("aria-label", "Image preview");
 
   const previewImage = document.createElement("img");
   previewImage.alt = "Portfolio image preview";
@@ -281,27 +283,35 @@ if (portfolioImages.length > 0) {
     activeImage = null;
   }
 
-  portfolioImages.forEach((image) => {
+  function openPreview(image) {
+    activeImage = image;
+    previewImage.src = image.src;
+    previewImage.alt = image.alt;
+    lightbox.hidden = false;
+    document.body.style.overflow = "hidden";
+    closeButton.focus();
+  }
+
+  previewImages.forEach((image) => {
     image.tabIndex = 0;
     image.setAttribute("role", "button");
     image.setAttribute("aria-haspopup", "dialog");
 
-    function openPreview() {
-      activeImage = image;
-      previewImage.src = image.src;
-      previewImage.alt = image.alt;
-      lightbox.hidden = false;
-      document.body.style.overflow = "hidden";
-      closeButton.focus();
-    }
-
-    image.addEventListener("click", openPreview);
+    image.addEventListener("click", () => openPreview(image));
 
     image.addEventListener("keydown", (event) => {
       if (event.key === "Enter" || event.key === " ") {
         event.preventDefault();
-        openPreview();
+        openPreview(image);
       }
+    });
+  });
+
+  document.querySelectorAll(".service-card > a").forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      const image = link.closest(".service-card").querySelector(".service-image img");
+      openPreview(image);
     });
   });
 

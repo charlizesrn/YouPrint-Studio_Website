@@ -1,6 +1,7 @@
 # YouPrint Studio
-> A responsive business website for a local printing and graphic design service provider.
-> Live demo link: [YouPrint Studio Website](https://charlizesrn.github.io/YouPrint-Studio_Website/). 
+A responsive business website for a local printing and graphic design service provider.
+
+> 🌐 Live link: [YouPrint Studio Website](https://charlizesrn.github.io/YouPrint-Studio_Website/) 
 
 ## Table of Contents
 * [Description](#description)
@@ -15,33 +16,33 @@ YouPrint Studio is a business website designed for a local printing and graphic 
 
 The project was created to address the need for an accessible and organized platform that showcases printing and design services while making it easier for customers to connect with the business. Instead of relying solely on social media communication, the website provides a centralized location where users can browse service information, view sample works, check pricing guides, upload design files, and contact the studio.
 
-This academic project was undertaken to apply web development concepts such as semantic HTML, responsive design, accessibility practices, SEO optimization, interactive JavaScript functionality, and modern UI/UX principles while creating a realistic business website.
+This academic project was undertaken to apply web development concepts such as semantic HTML, responsive design, accessibility practices, SEO optimization, interactive JavaScript functionality, and modern UI/UX principles.
 
 
 ## Technologies Used
-Frontend Technologies
+### Frontend Technologies
 - HTML5 - HTML5 Standard
 - CSS3 - CSS3 Standard
 - JavaScript - ECMAScript 2023 (ES14) or JavaScript ES6+
 
-External Libraries & Resources
+### External Libraries & Resources
 
 - Google Fonts (Sora & DM Sans)
 - Bootstrap Icons
 - Font Awesome Icons
 
-Development Tools
+### Development Tools
 - Git - Latest Version
 - GitHub - Web Platform
 
-Deployment Platform
+### Deployment Platform
 - GitHub Pages - Web Hosting Service
 
 ## Features
 
 | Key Feature | Description | Preview |
 |------------|-------------|---------|
-| 🏠 Home Page | Professional landing page featuring company information, featured services, and call-to-action sections. | <img src="assets/screenshots/home 1.png" alt="Home section of the YouPrint Studio Website" width="500"> |
+| 🏠 Home Page | Professional landing page featuring company information, featured services, and call-to-action sections. | <img src="assets/screenshots/Home 1.png" alt="Home section of the YouPrint Studio Website" width="500"> |
 | 👤 About Us Page | Highlights the organization's mission, vision, and objective | <img src="assets/screenshots/About us 2.png" alt="Home section of the YouPrint Studio Website" width="500">
 | 🎨 Services Showcase | Highlights printing and graphic design services with dedicated service cards and pricing information. | <img src="assets/screenshots/Services 1.png" alt="Services section of the YouPrint Studio Website" width="500"> |
 | 📂 Portfolio Gallery | Displays previous printing and graphic design projects to showcase quality and creativity. | <img src="assets/screenshots/portfolio 1.png" alt="Portfolio section of the YouPrint Studio Website" width="500"> |
@@ -53,7 +54,6 @@ Deployment Platform
 | 💰 Pricing Guide | Provides pricing information for common printing and graphic design services. | <img src="assets/screenshots/Pricing Guide.png" alt="Pricing guide section of the YouPrint Studio Website" width="500"> |
 | 🌙 Dark Mode | Allows users to switch between light and dark themes for a more comfortable viewing experience. | <img src="assets/screenshots/Dark Mode.png" alt="Home section in dark mode of the YouPrint Studio Website" width="500"> |
 | 📱 Responsive Design | Optimized for desktop, tablet, and mobile devices to ensure a seamless experience across all screen sizes. | GIF
- |
 
 ### Technical Highlights
 - Design file type validation: Accept formats in PDF, JPG, JPEG, PNG, AI, TIF, and TIFF.
@@ -71,7 +71,7 @@ Explore the website through the screenshots below.
 
 1. Home
 
-<img src="assets/screenshots/home 1.png" alt="Home section of the YouPrint Studio Website" width="500">
+<img src="assets/screenshots/Home 1.png" alt="Home section of the YouPrint Studio Website" width="500">
 
 2. About Us
 

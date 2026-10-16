@@ -55,6 +55,8 @@ if (
 }
 
 const mainNavigation = document.querySelector(".header-nav");
+let revealObserver = null;
+let blogRevealObserver = null;
 
 if (mainNavigation) {
   const navigationLinks = Array.from(
@@ -78,35 +80,30 @@ if (mainNavigation) {
         link.removeAttribute("aria-current");
       }
     });
+
+    const destination = document.querySelector(
+      clickedLink.getAttribute("href"),
+    );
+    const destinationSection = destination?.closest("section") ?? destination;
+
+    destinationSection?.querySelectorAll(".reveal").forEach((element) => {
+      const observer = element.matches(".blog-card")
+        ? blogRevealObserver
+        : revealObserver;
+
+      observer?.unobserve(element);
+      element.classList.remove("is-visible");
+
+      if (observer) {
+        window.requestAnimationFrame(() => observer.observe(element));
+      }
+    });
   });
 }
 
-const blogGrid = document.querySelector(".blog-grid");
 const prefersReducedMotion = window.matchMedia(
   "(prefers-reduced-motion: reduce)",
 );
-
-if (
-  blogGrid &&
-  "IntersectionObserver" in window &&
-  !prefersReducedMotion.matches
-) {
-  const blogCards = blogGrid.querySelectorAll(".blog-card");
-  const blogCardObserver = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.15 },
-  );
-
-  blogGrid.classList.add("is-reveal-ready");
-  blogCards.forEach((card) => blogCardObserver.observe(card));
-}
 
 const uploadFileInput = document.querySelector("#design-file");
 
@@ -219,27 +216,34 @@ if (reviewsCarousel && !reviewsCarousel.dataset.initialized) {
 const revealElements = document.querySelectorAll(".reveal");
 
 if (revealElements.length > 0) {
-  if (
-    !("IntersectionObserver" in window) ||
-    prefersReducedMotion.matches
-  ) {
+  if (!("IntersectionObserver" in window) || prefersReducedMotion.matches) {
     revealElements.forEach((element) => {
       element.classList.add("is-visible");
     });
   } else {
-    const revealObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.2 },
-    );
+    const revealObserverCallback = (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    };
 
-    revealElements.forEach((element) => revealObserver.observe(element));
+    revealObserver = new IntersectionObserver(revealObserverCallback, {
+      threshold: 0.2,
+    });
+    blogRevealObserver = new IntersectionObserver(revealObserverCallback, {
+      rootMargin: "0px 0px 120px 0px",
+    });
+
+    revealElements.forEach((element) => {
+      const observer = element.matches(".blog-card")
+        ? blogRevealObserver
+        : revealObserver;
+
+      observer.observe(element);
+    });
   }
 }
 

@@ -657,8 +657,8 @@ ul {
 
 .printing-services-container > .section-description,
 .graphic-design-services-container > .section-description {
-  max-width: none;
-  margin: 12px 0 30px;
+  max-width: 850px;
+  margin: 12px auto 30px;
   text-align: left;
 }
 

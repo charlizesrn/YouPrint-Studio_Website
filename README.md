@@ -53,7 +53,7 @@ This academic project was undertaken to apply web development concepts such as s
 | 📤 Design Upload | Enables customers to upload design files for printing and graphic design requests. | <img src="assets/screenshots/contact 2.png" alt="Depicting file upload feature of the YouPrint Studio Website" width="500"> |
 | 💰 Pricing Guide | Provides pricing information for common printing and graphic design services. | <img src="assets/screenshots/Pricing Guide.png" alt="Pricing guide section of the YouPrint Studio Website" width="500"> |
 | 🌙 Dark Mode | Allows users to switch between light and dark themes for a more comfortable viewing experience. | <img src="assets/screenshots/Dark Mode.png" alt="Home section in dark mode of the YouPrint Studio Website" width="500"> |
-| 📱 Responsive Design | Optimized for desktop, tablet, and mobile devices to ensure a seamless experience across all screen sizes. | GIF
+| 📱 Responsive Design | Optimized for desktop, tablet, and mobile devices to ensure a seamless experience across all screen sizes. | <img src="assets/screenshots/Mobile RP Design.png" alt="Mobile Responsive Design of YouPrint Studio in IPhone 14 Pro and Pixel 7 Pro"> <img src="assets/screenshots/Tablet & Desktop RP Design.png" alt="Tablet and Desktop Responsive Design of YouPrint Studio in IPad Air 5 and Macbook Air Laptop">
 
 ### Technical Highlights
 - Design file type validation: Accept formats in PDF, JPG, JPEG, PNG, AI, TIF, and TIFF.

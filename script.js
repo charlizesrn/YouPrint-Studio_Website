@@ -60,11 +60,11 @@ let blogRevealObserver = null;
 
 if (mainNavigation) {
   const navigationLinks = Array.from(
-    mainNavigation.querySelectorAll(".nav-Links a"),
+    mainNavigation.querySelectorAll(".nav-links a"),
   );
 
   mainNavigation.addEventListener("click", (event) => {
-    const clickedLink = event.target.closest(".nav-Links a");
+    const clickedLink = event.target.closest(".nav-links a");
 
     if (!clickedLink) {
       return;

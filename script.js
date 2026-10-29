@@ -310,7 +310,9 @@ if (previewImages.length > 0) {
   document.querySelectorAll(".service-card > a").forEach((link) => {
     link.addEventListener("click", (event) => {
       event.preventDefault();
-      const image = link.closest(".service-card").querySelector(".service-image img");
+      const image = link
+        .closest(".service-card")
+        .querySelector(".service-image img");
       openPreview(image);
     });
   });

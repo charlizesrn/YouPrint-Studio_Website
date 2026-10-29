@@ -379,7 +379,7 @@ ul {
 }
 
 .preview-service-card p {
-  color: var(--text-secondary);
+  color: #4a4a4a;
   margin-bottom: 16px;
 }
 
@@ -1841,6 +1841,14 @@ body.dark-mode .preview-service-icon {
   background-color: rgba(36, 36, 36, 0.92);
 }
 
+body.dark-mode .services-preview > h2,
+body.dark-mode .services-preview > .section-description,
+body.dark-mode .preview-service-card h3,
+body.dark-mode .preview-service-card p {
+  color: #ffffff;
+  text-shadow: 0 1px 4px rgba(128, 128, 128, 0.85);
+}
+
 body.dark-mode input,
 body.dark-mode textarea,
 body.dark-mode select {
@@ -1868,14 +1876,6 @@ body.dark-mode .pricing-table {
 
 body.dark-mode .pricing-table tbody tr:hover {
   background-color: #333333;
-}
-
-body.dark-mode .featured-content {
-  background: rgba(41, 41, 41, 0.65);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: var(--radius-lg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -1828,13 +1828,26 @@ body.dark-mode .service-card,
 body.dark-mode .portfolio-card,
 body.dark-mode .blog-card,
 body.dark-mode .contact-card,
-body.dark-mode .hours-item,
 body.dark-mode .review-form,
 body.dark-mode .service-pricing-container,
 body.dark-mode .blog-cta {
   background-color: var(--secondary-color);
   color: var(--text-primary);
   border-color: #444444;
+}
+
+body.dark-mode .hours-content h3,
+body.dark-mode .hours-content p {
+  color: #ffffff;
+}
+
+body.dark-mode .hours-item > i {
+  color: var(--primary-color);
+}
+
+body.dark-mode .contact-info a,
+body.dark-mode .contact-info address {
+  color: #ffffff;
 }
 
 body.dark-mode .preview-service-icon {
